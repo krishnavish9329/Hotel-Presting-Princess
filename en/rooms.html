@@ -1,20 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from www.hotel-aquino.de/en/rooms.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 19 Jul 2025 16:07:21 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-
 <head>
-    <meta charset="UTF-8">
-    <title>Hotel Presting Princess - Rooms</title>
-    <base>
-
+    <title>Hotel Prestige Princess - Rooms & Tariffs</title>
     <link rel="canonical" href="rooms.html">
-    <link rel="stylesheet"
-        href="./assets/css/layout.min.css%2crocksolid-slider.min.css%2cdefault-skin.min.css%2ccol...-2c79358b.css">
-    <script
-        src="./assets/js/jquery.min.js%2crocksolid-slider.min.js%2ccookiebar.min.js%2cmobile-me...-4a77e90c.js"></script>
+    <link rel="stylesheet" href="./assets/css/layout.min.css%2crocksolid-slider.min.css%2cdefault-skin.min.css%2ccol...-2c79358b.css">
+    <script src="./assets/js/jquery.min.js%2crocksolid-slider.min.js%2ccookiebar.min.js%2cmobile-me...-4a77e90c.js"></script>
     <link rel="alternate" hreflang="de" href="../de/rooms.html">
     <link rel="alternate" hreflang="en" href="rooms.html">
     <link rel="alternate" hreflang="x-default" href="rooms.html">
@@ -24,7 +14,287 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./files/theme/fav/favicon-16x16.png">
     <link rel="manifest" href="./files/theme/fav/site.html">
     <link rel="shortcut icon" href="./files/theme/fav/favicon.ico">
-
+    
+    <style>
+        /* Tariff Styling */
+        .tariff-section {
+            padding: 60px 0;
+            background: #f8f9fa;
+        }
+        
+        .tariff-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+            border: 1px solid #e9ecef;
+        }
+        
+        .tariff-card h3 {
+            color: #2C1810;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .price-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .price-table th {
+            background: #D4AF37;
+            color: white;
+            padding: 12px 8px;
+            text-align: center;
+            font-weight: 600;
+        }
+        
+        .price-table td {
+            padding: 10px 8px;
+            text-align: center;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .price-table tr:nth-child(even) {
+            background: rgba(212, 175, 55, 0.05);
+        }
+        
+        .price-highlight {
+            color: #D4AF37;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        
+        .features-list li {
+            padding: 6px 0;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .features-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #D4AF37;
+            font-weight: bold;
+        }
+        
+        .package-highlight {
+            background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .package-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        
+        .room-categories {
+            padding: 60px 0;
+            background: white;
+        }
+        
+        .room-category {
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            background: #f8f9fa;
+            border-left: 4px solid #D4AF37;
+        }
+        
+        .room-category h3 {
+            color: #2C1810;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+        
+        .room-category p {
+            color: #6C757D;
+            line-height: 1.6;
+        }
+        
+        .contact-section {
+            background: #2C1810;
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+        }
+        
+        .contact-section h3 {
+            color: #D4AF37;
+            margin-bottom: 20px;
+        }
+        
+        .btn-luxury {
+            background: #D4AF37;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            margin: 10px;
+        }
+        
+        .btn-luxury:hover {
+            background: #B8860B;
+            transform: translateY(-2px);
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Carousel Styling */
+        #carousel {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        }
+        
+        #carousel h2 {
+            color: #2C1810;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        
+        #carousel .ce_text {
+            color: #6C757D;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .mod_rocksolid_slider {
+            margin: 0 auto;
+            max-width: 1200px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .mod_rocksolid_slider .ce_image {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .mod_rocksolid_slider img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .mod_rocksolid_slider img:hover {
+            transform: scale(1.02);
+        }
+        
+        .mod_rocksolid_slider .ce_text {
+            text-align: center;
+            padding: 30px;
+            background: white;
+        }
+        
+        .mod_rocksolid_slider .ce_text h4 {
+            color: #D4AF37;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .mod_rocksolid_slider .ce_text p {
+            color: #6C757D;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .mod_rocksolid_slider .caption {
+            font-size: 0.9rem;
+            color: #D4AF37;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+        
+        /* Carousel Navigation Styling */
+        .mod_rocksolid_slider .rsts-nav {
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 25px;
+            padding: 10px;
+            margin: 20px auto;
+            max-width: 200px;
+        }
+        
+        .mod_rocksolid_slider .rsts-nav button {
+            background: #D4AF37;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin: 0 5px;
+            color: white;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .mod_rocksolid_slider .rsts-nav button:hover {
+            background: #B8860B;
+            transform: scale(1.1);
+        }
+        
+        .mod_rocksolid_slider .rsts-dots {
+            text-align: center;
+            margin: 20px 0;
+        }
+        
+        .mod_rocksolid_slider .rsts-dots button {
+            background: #D4AF37;
+            border: none;
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .mod_rocksolid_slider .rsts-dots button.active {
+            background: #B8860B;
+            transform: scale(1.2);
+        }
+        
+        @media (max-width: 768px) {
+            .tariff-card {
+                padding: 20px;
+            }
+            
+            .price-table {
+                font-size: 0.8rem;
+            }
+            
+            .price-table th,
+            .price-table td {
+                padding: 8px 5px;
+            }
+        }
+    </style>
 </head>
 
 <body id="top">
@@ -39,25 +309,14 @@
                         <a class="nav--brand" href="index.html">
                             <img src="assets/images/logop.png" alt="Logo" width="130" height="110">
                         </a>
-                        <!-- indexer::stop -->
                         <nav class="mod_customnav main-nav--custom block">
                             <a href="index.html#skipNavigation18" class="invisible">Skip navigation</a>
                             <ul class="level_1">
-                                <li class="first"><a href="rooms.html"
-                                        title="Newly remodeled, quiet rooms in the middle of Jabalpur"
-                                        class="first">Rooms</a></li>
-                                <li><a href="meetings-events.html"
-                                        title="Hotel Presting Princess - conference hotel in Jabalpur, in the middle of the city">Meetings
-                                        & Events</a></li>
-                                <li><a href="gastronomy.html"
-                                        title="Eating and drinking at Hotel Presting Princess - also at our beer garden">Gastronomy</a>
-                                </li>
-                                <li><a href="event-room-rental.html"
-                                        title="Hire event rooms for private celebrations in the centre of Jabalpur">Family
-                                        celebrations</a></li>
-                                <li class="last"><a href="public-events.html"
-                                        title="A lively meeting place. For all people from near and far."
-                                        class="last">Princess Events</a></li>
+                                <li class="first"><a href="rooms.html" title="Luxury rooms and suites" class="first">Rooms</a></li>
+                                <li><a href="meetings-events.html" title="Conference and event facilities">Meetings & Events</a></li>
+                                <li><a href="gastronomy.html" title="Fine dining and restaurants">Gastronomy</a></li>
+                                <li><a href="event-room-rental.html" title="Private celebrations and events">Family celebrations</a></li>
+                                <li class="sibling"><a href="contact.html" title="Contact" class="sibling">Contact</a></li>
                             </ul>
                             <span id="skipNavigation18" class="invisible"></span>
                         </nav>
@@ -79,57 +338,19 @@
                                     <nav class="mod_navigation block" id="navbar">
                                         <a href="index.html#skipNavigation1" class="invisible">Skip navigation</a>
                                         <ul class="level_1">
-                                            <li class="sibling"><a href="rooms.html"
-                                                    title="Newly remodeled, quiet rooms in the middle of Jabalpur"
-                                                    class="sibling">Rooms</a></li>
-                                            <li class="sibling"><a href="meetings-events.html"
-                                                    title="Hotel Presting Princess - conference hotel in Jabalpur, in the middle of the city"
-                                                    class="sibling">Meetings & Events</a></li>
-                                            <li class="sibling"><a href="gastronomy.html"
-                                                    title="Eating and drinking at Hotel Presting Princess - also at our beer garden"
-                                                    class="sibling">Gastronomy</a></li>
-                                            <li class="sibling"><a href="event-room-rental.html"
-                                                    title="Hire event rooms for private celebrations in the centre of Jabalpur"
-                                                    class="sibling">Family celebrations</a></li>
-                                            <li class="sibling"><a href="summer-and-beer-garden.html"
-                                                    title="Beer garden in Jabalpur at Hotel Presting Princess"
-                                                    class="sibling">Summer- and beer garden</a></li>
-                                            <li class="sibling"><a href="location-and-directions.html"
-                                                    title="Location and Directions - a hotel in the middle of Jabalpur"
-                                                    class="sibling">Location and Directions</a></li>
-                                            <li class="sibling"><a href="underground-car-park-guests.html"
-                                                    title="Park directly in the underground car park under the Hotel Presting Princess"
-                                                    class="sibling">Underground car park - guests</a></li>
-                                            <li class="sibling"><a href="subscribe-to-newsletter.html"
-                                                    title="Subscribe to our newsletter" class="sibling">Subscribe to
-                                                    newsletter</a></li>
-                                            <li class="sibling"><a href="catholic-yards-berlin.html"
-                                                    title="The Catholic Yards of Jabalpur - Hotel Presting Princess"
-                                                    class="sibling">The Catholic Yards of Jabalpur</a></li>
-                                            <li class="sibling"><a href="career.html"
-                                                    title="Open positions and job opportunities at Hotel Presting Princess in Jabalpur"
-                                                    class="sibling">Career</a></li>
-                                            <li class="sibling"><a href="impressions.html"
-                                                    title="Impressions and pictures of the Hotel Presting Princess in Jabalpur"
-                                                    class="sibling">Impressions</a></li>
-                                            <li class="sibling"><a href="awards-and-certificates.html"
-                                                    title="Awards and certificates" class="sibling">Awards and
-                                                    certificates</a></li>
-                                            <li class="sibling"><a href="contact.html" title="Contact"
-                                                    class="sibling">Contact</a></li>
-                                            <li class="sibling"><a href="imprint.html"
-                                                    title="Imprint - Hotel Presting Princess in the middle of Jabalpur"
-                                                    class="sibling">Imprint</a></li>
-                                            <li class="sibling"><a href="privacy-policy.html"
-                                                    title="Privacy Policy of Hotel Presting Princess in Jabalpur"
-                                                    class="sibling">Privacy Policy</a></li>
-                                            <li class="sibling last"><a href="general-terms-conditions.html"
-                                                    title="General Terms and Conditions of Hotel Presting Princess"
-                                                    class="sibling last">General terms & conditions</a></li>
+                                            <li class="active first"><strong class="active first">Welcome</strong></li>
+                                            <li class="sibling"><a href="rooms.html" title="Luxury rooms and suites" class="sibling">Rooms</a></li>
+                                            <li class="sibling"><a href="meetings-events.html" title="Conference and event facilities" class="sibling">Meetings & Events</a></li>
+                                            <li class="sibling"><a href="gastronomy.html" title="Fine dining and restaurants" class="sibling">Gastronomy</a></li>
+                                            <li class="sibling"><a href="event-room-rental.html" title="Private celebrations and events" class="sibling">Family celebrations</a></li>
+                                            <li class="sibling"><a href="location-and-directions.html" title="Location and Directions" class="sibling">Location and Directions</a></li>
+                                            <li class="sibling"><a href="career.html" title="Career opportunities" class="sibling">Career</a></li>
+                                            <li class="sibling"><a href="impressions.html" title="Hotel impressions and photos" class="sibling">Impressions</a></li>
+                                            <li class="sibling"><a href="contact.html" title="Contact" class="sibling">Contact</a></li>
+                                            <li class="sibling"><a href="privacy-policy.html" title="Privacy Policy" class="sibling">Privacy Policy</a></li>
                                         </ul>
                                         <span id="skipNavigation1" class="invisible"></span>
                                     </nav>
-                                    <!-- indexer::continue -->
                                 </div>
                             </div>
                             <script>(function ($) { $('#mobile-menu-2').mobileMenu({ 'animation': !0, 'animationSpeed': 500, 'breakPoint': 9999, 'offCanvas': !1, 'overlay': !1, 'disableNavigation': !1, 'parentTogglers': !1, 'closeOnLinkClick': !1, 'keepInPlace': !1, 'position': 'right', 'size': '80', 'trigger': $('#mobile-menu-2-trigger') }) })(jQuery)</script>
@@ -141,21 +362,21 @@
                     <div class="block-max-width">
                         <div class="text-bg--image hero-image ce_rsce_text_picture image-kb-wrap">
                             <picture>
-                                <source srcset="./assets/images/images/PICT0236.JPG 575w"
+                                <source srcset="./assets/images/images/DSC_0460.jpg 575w"
                                     sizes="100vw" media="(max-width: 575px)" type="image/webp" width="575" height="860">
-                                <source srcset="./assets/images/images/PICT0236.JPG 575w"
+                                <source srcset="./assets/images/images/DSC_0460.jpg 575w"
                                     sizes="100vw" media="(max-width: 575px)" width="575" height="860">
                                 <source
-                                    srcset="./assets/images/images/PICT0236.JPG 770w, ../assets/images/images/PICT0236.JPG 828w"
+                                    srcset="./assets/images/images/DSC_0460.jpg 770w, ../assets/images/images/DSC_0460.jpg 828w"
                                     sizes="100vw" media="(max-width: 767px)" type="image/webp" width="770" height="800">
                                 <source
-                                    srcset="./assets/images/images/PICT0236.JPG 770w, ../assets/images/images/PICT0236.JPG 828w"
+                                    srcset="./assets/images/images/DSC_0460.jpg 770w, ../assets/images/images/DSC_0460.jpg 828w"
                                     sizes="100vw" media="(max-width: 767px)" width="770" height="800">
                                 <source
-                                    srcset="./assets/images/images/PICT0236.JPG 640w, ./assets/images/images/PICT0236.JPG 1280w, ./assets/images/images/PICT0236.JPG 1920w"
+                                    srcset="./assets/images/images/DSC_0460.jpg 640w, ./assets/images/images/DSC_0460.jpg 1280w, ./assets/images/images/DSC_0460.jpg 1920w"
                                     sizes="100vw" type="image/webp" width="640" height="287">
-                                <img src="./assets/images/images/PICT0236.JPG"
-                                    srcset="./assets/images/images/PICT0236.JPG 640w, ./assets/images/images/PICT0236.JPG 1280w, ./assets/images/images/PICT0236.JPG 1920w"
+                                <img src="./assets/images/images/DSC_0460.jpg"
+                                    srcset="./assets/images/images/DSC_0460.jpg 640w, ./assets/images/images/DSC_0460.jpg 1280w, ./assets/images/images/DSC_0460.jpg 1920w"
                                     sizes="100vw" width="640" height="287"
                                     alt="The Hotel Aquino offers all the amenities and services of a 3* superior hotel"
                                     title="The Hotel Aquino offers all the amenities and services of a 3* superior hotel">
@@ -175,64 +396,103 @@
                 </div>
             </div>
         </header>
-        <div id="container">
-            <main id="main">
-                <div class="inside">
-                    <div class="mod_article section-padding block" id="section1">
-                        <div class="container-fluid width-max-1200">
-                            <h1 class="ce_headline text-center uppercase max-width-600 ">
-                                The Hotel Aquino is a 3-star hotel<br>certified according to DEHOGA guidelines.</h1>
-                            <div class="ce_text width-max-600  block">
-                                <p style="text-align: center;">The Hotel Aquino Berlin has a total of <strong>40 hotel
-                                        rooms</strong> and <strong>3 apartments</strong>, which are characterised in
-                                    particular by their pleasant size, small balconies and quiet location.</p>
-                                <p style="text-align: center;">The hotel offers all the amenities and services of a 3*
-                                    superior hotel - perhaps even a little more. The special atmosphere of the property
-                                    and the surrounding courtyards, the lived cordiality of our (mostly) longstanding
-                                    employees or the individual touch that the team brought to the renovation of the
-                                    hotel cannot be certified. Convince yourself!</p>
+
+        <main id="main">
+            <div id="container">
+                <div class="mod_article section-padding block" id="article-354">
+                    <div class="container-fluid width-max-1200">
+                        <h1 class="ce_headline text-center uppercase">
+                            Luxury Rooms & Suites
+                        </h1>
+                        <div class="ce_text width-max-600 block mx-auto">
+                            <p style="text-align: center;">
+                                Experience unparalleled comfort and elegance in our meticulously designed rooms and suites. 
+                                From cozy standard rooms to luxurious suites, every accommodation is crafted to exceed your expectations.
+                            </p>
+                            <p style="text-align: center;">
+                                Whether you're traveling for business or leisure, our rooms provide the perfect blend of 
+                                comfort, style, and functionality. Each room is equipped with modern amenities and designed 
+                                with your comfort in mind.
+                            </p>
+                            <p style="text-align: center;">
+                                Discover your perfect stay with us!
+                            </p>
+                        </div>
+                        <div class="ce_row row justify-content-center">
+                            <div class="ce_column text-center col-12 col-sm-6 col-md-3 mb-4">
+                                <div class="ce_image rounded-circle mb-4 block">
+                                    <figure class="image_container" style="margin-top:50px;">
+                                        <img src="./assets/images/4/icon-feature-zentral-b240462f.jpg"
+                                            srcset="./assets/images/4/icon-feature-zentral-b240462f.jpg 1x, ./assets/images/6/icon-feature-zentral-201763e6.jpg 1.5x, ./assets/images/8/icon-feature-zentral-2757be55.jpg 2x"
+                                            width="100" height="100" alt="Premium Room Amenities">
+                                    </figure>
+                                </div>
+                                <div class="ce_text block">
+                                    <p><strong>Premium Room Amenities</strong></p>
+                                </div>
+                            </div>
+                            <div class="ce_column text-center col-12 col-sm-6 col-md-3 mb-4">
+                                <div class="ce_image rounded-circle mb-4 block">
+                                    <figure class="image_container" style="margin-top:50px;">
+                                        <img src="./assets/images/a/icon-feature-ruhig-27a29861.jpg"
+                                            srcset="./assets/images/a/icon-feature-ruhig-27a29861.jpg 1x, ./assets/images/e/icon-feature-ruhig-0addbe08.jpg 1.5x, ./assets/images/2/icon-feature-ruhig-f67722ab.jpg 2x"
+                                            width="100" height="100" alt="Comfortable Accommodations">
+                                    </figure>
+                                </div>
+                                <div class="ce_text block">
+                                    <p><strong>Comfortable Accommodations</strong></p>
+                                </div>
+                            </div>
+                            <div class="ce_column text-center col-12 col-sm-6 col-md-3 mb-4">
+                                <div class="ce_image rounded-circle mb-4 block">
+                                    <figure class="image_container" style="margin-top:50px;">
+                                        <img src="./assets/images/a/icon-feature-tiefgarage-91d4402a.jpg"
+                                            srcset="./assets/images/a/icon-feature-tiefgarage-91d4402a.jpg 1x, ./assets/images/5/icon-feature-tiefgarage-ba1cc6da.jpg 1.5x, ./assets/images/5/icon-feature-tiefgarage-0f9724b8.jpg 2x"
+                                            width="100" height="100"
+                                            alt="Modern Room Facilities">
+                                    </figure>
+                                </div>
+                                <div class="ce_text block">
+                                    <p><strong>Modern Room Facilities</strong></p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="mod_article block" id="article-363">
+
+                    <div class="mod_article block" id="article-355">
                         <div class="block-max-width">
                             <div class="row no-gutters">
                                 <div class="col-md-6 order-md-1 order-1">
                                     <div class="teaser-image h-100 h-100-img object-fit-cover">
-                                        <a href="impressions.html#standard" title="More pictures ...">
-                                            <picture>
-                                                <source
-                                                    srcset="assets/images/4/hotel-doppelzimmer-standard-15dd4bc0.webp 600w, assets/images/6/hotel-doppelzimmer-standard-59ac8fe5.webp 1200w"
-                                                    sizes="(max-width: 600px) 600px" type="image/webp" width="600"
-                                                    height="400">
-                                                <img src="./assets/images/f/hotel-doppelzimmer-standard-1d27d7e8.jpg"
-                                                    srcset="assets/images/f/hotel-doppelzimmer-standard-1d27d7e8.jpg 600w, assets/images/c/hotel-doppelzimmer-standard-9dbad819.jpg 1200w"
-                                                    sizes="(max-width: 600px) 600px" width="600" height="400"
-                                                    alt="The standard double room at Hotel Aquino"
-                                                    title="The standard double room at Hotel Aquino">
-                                            </picture>
-                                        </a>
+                                        <picture>
+                                            <img src="./assets/images/images/DSC_0373.JPG"
+                                                srcset="./assets/images/images/DSC_0373.JPG 600w, ../assets/images/images/DSC_0373.JPG 1200w"
+                                                sizes="(max-width: 600px) 600px" width="600" height="400"
+                                                alt="Premium Hotel Suite at Hotel Prestige Princess"
+                                                title="Premium Hotel Suite at Hotel Prestige Princess">
+                                        </picture>
                                     </div>
                                 </div>
                                 <div class="col-md-6 order-2 order-md-2">
                                     <div
                                         class="teaser-area d-flex justify-content-center align-items-center area--gray">
                                         <div class="teaser-text--inner">
-                                            <h2>Enjoy good standard in peace</h2>
-                                            <p>The <strong>9 double rooms</strong> and <strong>4 single rooms</strong>
-                                                in the <strong>standard category</strong> face the quiet front courtyard
-                                                of the hotel and are all equipped with a desk, minibar, safe,
-                                                flat-screen TV and a 2.10-metre box spring bed. The double rooms have a
-                                                small balcony and of course you can enjoy free WIFI throughout the
-                                                hotel. The bathrooms were completely renovated in 2020 and offer a
-                                                ground-level rain shower and a selection of care products.</p>
-                                            <p>A shoeshine glove, laundry service (for a fee) and iron and ironing board
-                                                (on request) complete the range of services. The rooms in the standard
-                                                category are all equipped with allergy-friendly design flooring.</p>
-                                            <div class="teaser-area-link block">
-                                                <a href="impressions.html#standard" title="More pictures ...">More
-                                                    pictures ...</a>
-                                            </div>
+                                            <h2>Elegant comfort, designed for luxury</h2>
+                                            <p>
+                                                Hotel Prestige Princess offers elegantly designed rooms that combine
+                                                comfort, functionality, and style. Each room is well-furnished with
+                                                modern amenities such as air conditioning, flat-screen TVs,
+                                                complimentary Wi-Fi, work desks, and 24-hour room service. From cozy
+                                                Deluxe Rooms to spacious Executive Suites, guests can choose from a
+                                                variety of categories tailored to both business and leisure travelers.
+                                            </p>
+                                            <p>
+                                                The interiors are clean, contemporary, and designed to provide a
+                                                relaxing stay right in the heart of Jabalpur. Thoughtfully curated décor
+                                                and warm lighting create a welcoming ambiance for every guest. Whether
+                                                you're here for work or a weekend getaway, every detail ensures a
+                                                comfortable and memorable experience.
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -242,39 +502,27 @@
                                     <div
                                         class="teaser-area d-flex justify-content-center align-items-center area--white">
                                         <div class="teaser-text--inner">
-                                            <h2>Superior in equipment and service</h2>
-                                            <p>Our new <strong>superior rooms</strong> were completed in 2023 and
-                                                furnished with great dedication and attention to detail. Each room is a
-                                                little different and individually coordinated. <br>In addition to the
-                                                amenities of the standard category, you can expect a comfortable reading
-                                                chair with footstool, a 43-inch TV, free coffee and tea making
-                                                facilities and a bottle of Adelholzener mineral water on arrival. The
-                                                <strong>27 double rooms</strong> in this category are located on the
-                                                upper floors of the hotel.</p>
-                                            <p>We hope that you will feel particularly comfortable in these new rooms.
-                                            </p>
-                                            <div class="teaser-area-link block">
-                                                <a href="impressions.html#superior" title="More pictures ...">More
-                                                    pictures ...</a>
-                                            </div>
+                                            <h2>Perfect venue for your special events</h2>
+                                            <p>Hotel Prestige Princess is the perfect venue for weddings, corporate
+                                                events, and social gatherings. With elegant banquet halls, modern
+                                                amenities, and a central location in Jabalpur, every event is executed
+                                                with care and class. Let us make your special occasion seamless,
+                                                stylish, and unforgettable. Our dedicated team ensures personalized
+                                                service to turn your vision into reality.<a
+                                                    href="meetings-events.html">Send us your
+                                                    enquiry HERE!</a></p>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="col-md-6 order-md-2 order-1">
                                     <div class="teaser-image h-100 h-100-img object-fit-cover">
-                                        <a href="impressions.html#superior" title="More pictures ...">
-                                            <picture>
-                                                <source
-                                                    srcset="assets/images/9/309-doppelzimmer-d65f365f.webp 600w, assets/images/d/309-doppelzimmer-ee4338ae.webp 1200w"
-                                                    sizes="(max-width: 600px) 600px" type="image/webp" width="600"
-                                                    height="400">
-                                                <img src="../assets/images/d/309-doppelzimmer-73fdf64c.jpg"
-                                                    srcset="assets/images/d/309-doppelzimmer-73fdf64c.jpg 600w, assets/images/3/309-doppelzimmer-4364717b.jpg 1200w"
-                                                    sizes="(max-width: 600px) 600px" width="600" height="400"
-                                                    alt="Double room in the superior category at Hotel Aquino"
-                                                    title="Double room in the superior category at Hotel Aquino">
-                                            </picture>
-                                        </a>
+                                        <picture>
+                                            <img src="./assets/images/images/DSC_0002.jpg"
+                                                srcset="./assets/images/images/DSC_0002.jpg 600w, ./assets/images/images/DSC_0002.jpg 1200w"
+                                                sizes="(max-width: 600px) 600px" width="600" height="400"
+                                                alt="Conference room in Hotel Prestige Princess"
+                                                title="Conference room in Hotel Prestige Princess">
+                                        </picture>
                                     </div>
                                 </div>
                             </div>
@@ -282,15 +530,11 @@
                                 <div class="col-md-6 order-md-1 order-1">
                                     <div class="teaser-image h-100 h-100-img object-fit-cover">
                                         <picture>
-                                            <source
-                                                srcset="assets/images/9/apartment-mit-kueche-279ef310.webp 600w, assets/images/6/apartment-mit-kueche-48c7715c.webp 1200w"
-                                                sizes="(max-width: 600px) 600px" type="image/webp" width="600"
-                                                height="400">
-                                            <img src="../assets/images/f/apartment-mit-kueche-3773e282.jpg"
-                                                srcset="assets/images/f/apartment-mit-kueche-3773e282.jpg 600w, assets/images/a/apartment-mit-kueche-73496f57.jpg 1200w"
+                                            <img src="./assets/images/images/DSC_0039.jpg"
+                                                srcset="./assets/images/images/DSC_0039.jpg 600w, ./assets/images/images/DSC_0039.jpg 1200w"
                                                 sizes="(max-width: 600px) 600px" width="600" height="400"
-                                                alt="The 2 flats at Hotel Aquino have a very well-equipped kitchenette"
-                                                title="The 2 flats at Hotel Aquino have a very well-equipped kitchenette">
+                                                alt="View over Hotel Prestige Princess on a sunny day"
+                                                title="View over Hotel Prestige Princess on a sunny day">
                                         </picture>
                                     </div>
                                 </div>
@@ -298,234 +542,321 @@
                                     <div
                                         class="teaser-area d-flex justify-content-center align-items-center area--black">
                                         <div class="teaser-text--inner">
-                                            <h2>If you like to cook for yourself...</h2>
-                                            <p>... our <strong>2 apartments</strong> are perfect for your stay. The
-                                                well-equipped kitchenette not only includes hobs and cookware, a fridge
-                                                with freezer compartment and toaster, but also a mini oven/microwave and
-                                                dishwasher. In addition to all the amenities of our standard rooms, you
-                                                will also find a cozy dining area with a view. The apartments also have
-                                                a small balcony and in the immediate vicinity of the hotel you will find
-                                                numerous grocery stores as well as the famous Berlin &#34;Spätis&#34;.
+                                            <h2>The heart of Jabalpur right outside your door.</h2>
+                                            <p>
+                                                Discover the perfect blend of history, nature, and culture.
+
+                                                Explore iconic spots like Bhedaghat, Madan Mahal, and Rani Durgavati
+                                                Fort.
+
+                                                Step into the charm of Jabalpur—where every corner tells a story.
+
+                                                From marble cliffs to lively markets, adventure awaits just moments
+                                                away.
+
+                                                Experience the soulful vibe of Madhya Pradesh's cultural capital.
+
+                                                Unwind, explore, and be inspired—Jabalpur is calling.
+
+                                                Stay central, stay connected, and make memories that last.
+
+                                                A city rich in tradition, surrounded by natural wonders.
                                             </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row no-gutters">
-                                <div class="col-md-6 order-md-1 order-2">
-                                    <div
-                                        class="teaser-area d-flex justify-content-center align-items-center area--white">
-                                        <div class="teaser-text--inner">
-                                            <h2>Perfect for friends and family</h2>
-                                            <p>The 64sqm <strong>&#34;Grand Apartment&#34;</strong> on the 5th floor of
-                                                the hotel has 2 separate bedrooms, a bathroom with tub / shower, a fully
-                                                equipped kitchen, a living / dining room with space for up to 4 adults
-                                                and air conditioning. The very special feature of this apartment is the
-                                                30sqm roof terrace, with lounge furniture, summer loungers / parasols
-                                                and another dining area, with lots of Berlin air and great views over
-                                                the city. Of course, the apartment has all the other amenities of our
-                                                room and apartment categories.</p>
-                                            <div class="teaser-area-link block">
-                                                <a href="impressions.html#grand" title="More pictures ...">More pictures
-                                                    ...</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 order-md-2 order-1">
-                                    <div class="teaser-image h-100 h-100-img object-fit-cover">
-                                        <a href="impressions.html#grand" title="More pictures ...">
-                                            <picture>
-                                                <source
-                                                    srcset="assets/images/f/grand-apartment-wohnzimmer-63c6777b.webp 600w, assets/images/3/grand-apartment-wohnzimmer-9e20419f.webp 1200w"
-                                                    sizes="(max-width: 600px) 600px" type="image/webp" width="600"
-                                                    height="400">
-                                                <img src="./assets/images/5/grand-apartment-wohnzimmer-b2f38eb2.jpg"
-                                                    srcset="assets/images/5/grand-apartment-wohnzimmer-b2f38eb2.jpg 600w, assets/images/6/grand-apartment-wohnzimmer-fb4533bb.jpg 1200w"
-                                                    sizes="(max-width: 600px) 600px" width="600" height="400"
-                                                    alt="The 64 square metre ‘Grand Apartment’ on the 5th floor of the house"
-                                                    title="The 64 square metre ‘Grand Apartment’ on the 5th floor of the house">
-                                            </picture>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row no-gutters">
-                                <div class="col-md-6 order-md-1 order-1">
-                                    <div class="teaser-image h-100 h-100-img object-fit-cover">
-                                        <picture>
-                                            <source
-                                                srcset="assets/images/c/buffett-1-bf4f68a5.webp 600w, assets/images/1/buffett-1-ff07dfc2.webp 1200w"
-                                                sizes="(max-width: 600px) 600px" type="image/webp" width="600"
-                                                height="400">
-                                            <img src="./assets/images/a/buffett-1-2adc197d.jpg"
-                                                srcset="assets/images/a/buffett-1-2adc197d.jpg 600w, assets/images/1/buffett-1-bdd9edfc.jpg 1200w"
-                                                sizes="(max-width: 600px) 600px" width="600" height="400"
-                                                alt="At the Aquin restaurant we serve a varied breakfast buffet with regional delicacies and your choice of fresh organic eggs."
-                                                title="At the Aquin restaurant we serve a varied breakfast buffet with regional delicacies and your choice of fresh organic eggs.">
-                                        </picture>
-                                    </div>
-                                </div>
-                                <div class="col-md-6 order-2 order-md-2">
-                                    <div
-                                        class="teaser-area d-flex justify-content-center align-items-center area--gray">
-                                        <div class="teaser-text--inner">
-                                            <h2>For your wellbeing</h2>
-                                            <p>At the restaurant Aquin we serve a varied breakfast buffet, with regional
-                                                delicacies and your choice of fresh organic eggs.</p>
-                                            <p>Our hotel 24h reception offers a small selection of snacks and during
-                                                summer months we run a small beer garden in our frontyard, the Aquino
-                                                Summer Garden, with uncomplicated, daily changing dishes of German
-                                                cuisine.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
-                    <!-- Room Plan Price Table -->
-                    <div class="mod_article section-padding block" id="room-plan-prices">
-                      <div class="container-fluid width-max-1200">
-                        <h2 class="ce_headline text-center uppercase">Meal Plan Price Additions</h2>
-                        <div class="ce_text width-max-600 text-center block mx-auto">
-                          <p>The following additional charges apply for meal plans (per night):</p>
-                          <table class="table table-bordered table-striped mx-auto" style="max-width: 600px;">
-                            <thead>
-                              <tr>
-                                <th>Plan</th>
-                                <th>Single Occupancy</th>
-                                <th>Double Occupancy</th>
-                                <th>Triple Occupancy</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td><strong>MAP (Breakfast + One Meal)</strong></td>
-                                <td>+ Rs 750</td>
-                                <td>+ Rs 1200</td>
-                                <td>+ Rs 1800</td>
-                              </tr>
-                              <tr>
-                                <td><strong>AP (Breakfast + Two Meals)</strong></td>
-                                <td>+ Rs 1000</td>
-                                <td>+ Rs 1800</td>
-                                <td>+ Rs 2600</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                          <p class="mt-3">These charges are in addition to the base room rates. Please contact us for detailed pricing or special requirements.</p>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="mod_article section-padding block" id="article-364">
+                    
+                    <div class="mod_article section-padding block" id="article-356">
                         <div class="container-fluid width-max-1200">
                             <h2 class="ce_headline text-center uppercase ">
-                                Wellbeing areas</h2>
+                                Our Room Categories & Tariffs</h2>
                             <div class="ce_text width-max-600 text-center  block">
-                                <p>The bathrooms offer an appealing feel-good area with a ground-level rain shower,
-                                    large mirror and various cosmetic items.</p>
-                                <p>In our superior rooms we carry the particularly sustainable care product line
-                                    &#34;Fair CosmEthics&#34;.</p>
+                                <p style="text-align: center;">Experience luxury and comfort with our carefully designed room categories and competitive pricing.</p>
                             </div>
                         </div>
                     </div>
-                    <div class="mod_article section-padding block" id="carousel">
+
+                    <!-- Tariff Section -->
+                    <div class="mod_article section-padding block" id="tariff-section">
                         <div class="container-fluid width-max-1200">
-                            <div class="mod_rocksolid_slider carousel  block">
-                                <div data-rsts-name="Slide 3">
-                                    <div class="ce_image block">
-                                        <figure class="image_container">
-                                            <picture>
-                                                <source
-                                                    srcset="./assets/images/images/DSC_0010.jpg 320w, ./assets/images/images/DSC_0010.jpg 640w, ./assets/images/images/DSC_0010.jpg 960w"
-                                                    sizes="100vw" type="image/webp" width="320" height="213">
-                                                <img src="./assets/images/images/DSC_0010.jpg"
-                                                    srcset="./assets/images/images/DSC_0010.jpg 320w, ./assets/images/images/DSC_0010.jpg 640w, ./assets/images/images/DSC_0010.jpg 960w"
-                                                    sizes="100vw" width="320" height="213"
-                                                    alt="A secluded spot - right in the middle of Mitte. A little away from the hustle and bustle of the capital, yet right in the middle of it all - that&#39;s how the Aquino Summer Garden awaits you."
-                                                    title="A secluded spot - right in the middle of Mitte. A little away from the hustle and bustle of the capital, yet right in the middle of it all - that&#39;s how the Aquino Summer Garden awaits you.">
-                                            </picture>
-                                            <figcaption class="caption">A secluded spot - right in the middle of Mitte.
-                                                A little away from the hustle and bustle of the capital, yet right in
-                                                the middle of it all - that&#39;s how the Aquino Summer Garden awaits
-                                                you.</figcaption>
-                                        </figure>
-                                    </div>
-                                    <div class="ce_text  block">
-                                        <p>Aquino summer garden</p>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="tariff-card">
+                                        <h3>Prestige Nature's Nest</h3>
+                                        <p class="text-center mb-4">Kanha National Park Experience</p>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <h5 class="text-center mb-3">Continental Plan</h5>
+                                                <p class="text-center"><small>Room + Breakfast + Free Swimming Pool</small></p>
+                                                <table class="price-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Room Type</th>
+                                                            <th>Single</th>
+                                                            <th>Double</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>North Winds</td>
+                                                            <td class="price-highlight">₹8,000</td>
+                                                            <td class="price-highlight">₹10,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Winds</td>
+                                                            <td class="price-highlight">₹4,500</td>
+                                                            <td class="price-highlight">₹5,100</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Wild Dreams</td>
+                                                            <td class="price-highlight">₹5,500</td>
+                                                            <td class="price-highlight">₹5,500</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <h5 class="text-center mb-3">American Plan</h5>
+                                                <p class="text-center"><small>Room + Breakfast + Lunch + Dinner + Free Swimming Pool</small></p>
+                                                <table class="price-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Room Type</th>
+                                                            <th>Single</th>
+                                                            <th>Double</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>North Winds</td>
+                                                            <td class="price-highlight">₹8,800</td>
+                                                            <td class="price-highlight">₹11,600</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>South Winds</td>
+                                                            <td class="price-highlight">₹5,300</td>
+                                                            <td class="price-highlight">₹6,700</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>Wild Dreams</td>
+                                                            <td class="price-highlight">₹6,300</td>
+                                                            <td class="price-highlight">₹7,100</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="mt-4">
+                                            <h6>Child Rates:</h6>
+                                            <ul class="features-list">
+                                                <li>Below 12 years: ₹500 (CP) / ₹1,500 (AP)</li>
+                                                <li>Above 12 years: ₹800 (CP) / ₹2,800 (AP)</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                                <div data-rsts-name="Slide 1">
-                                    <div class="ce_image  block">
-                                        <figure class="image_container">
-                                            <picture>
-                                                <source
-                                                    srcset="./assets/images/images/DSC_0326.JPG 320w, ./assets/images/images/DSC_0326.JPG 640w, ./assets/images/images/DSC_0326.JPG 960w"
-                                                    sizes="100vw" type="image/webp" width="320" height="213">
-                                                <img src="./assets/images/images/DSC_0326.JPG"
-                                                    srcset="./assets/images/images/DSC_0326.JPG 320w, ./assets/images/images/DSC_0326.JPG 640w, ./assets/images/images/DSC_0326.JPG 960w"
-                                                    sizes="100vw" width="320" height="213"
-                                                    alt="Standard room with small balkony"
-                                                    title="Standard room with small balkony">
-                                            </picture>
-                                        </figure>
-                                    </div>
-                                    <div class="ce_text  block">
-                                        <p>Standard room with small balkony</p>
-                                    </div>
-                                </div>
-                                <div data-rsts-name="Slide 2">
-                                    <div class="ce_image  block">
-                                        <figure class="image_container">
-                                            <picture>
-                                                <source
-                                                    srcset="./assets/images/images/DSC_0215.JPG 320w, ./assets/images/images/DSC_0215.JPG 640w, ./assets/images/images/DSC_0215.JPG 960w"
-                                                    sizes="100vw" type="image/webp" width="320" height="213">
-                                                <img src="./assets/images/images/DSC_0215.JPG"
-                                                    srcset="./assets/images/images/DSC_0215.JPG 320w, ./assets/images/images/DSC_0215.JPG 640w, ./assets/images/images/DSC_0215.JPG 960w"
-                                                    sizes="100vw" width="320" height="213" alt="Lobby garden"
-                                                    title="Lobby garden">
-                                            </picture>
-                                        </figure>
-                                    </div>
-                                    <div class="ce_text  block">
-                                        <p>Lobby garden</p>
-                                    </div>
-                                </div>
-                                <div data-rsts-name="Slide 4">
-                                    <div class="ce_image  block">
-                                        <figure class="image_container">
-                                            <picture>
-                                                <source
-                                                    srcset="./assets/images/images/DSC_0432.jpg 320w, ./assets/images/images/DSC_0432.jpg 640w, ./assets/images/images/DSC_0432.jpg 960w"
-                                                    sizes="100vw" type="image/webp" width="320" height="213">
-                                                <img src="./assets/images/images/DSC_0432.jpg"
-                                                    srcset="./assets/images/images/DSC_0432.jpg 320w, ./assets/images/images/DSC_0432.jpg 640w, ./assets/images/images/DSC_0432.jpg 960w"
-                                                    sizes="100vw" width="320" height="213"
-                                                    alt="The lobby of the Hotel Aquino with grand piano"
-                                                    title="The lobby of the Hotel Aquino with grand piano">
-                                            </picture>
-                                        </figure>
-                                    </div>
-                                    <div class="ce_text  block">
-                                        <p>Our lobby with grand piano</p>
+                                
+                                <div class="col-lg-6">
+                                    <div class="tariff-card">
+                                        <h3>Hotel Prestige Princess</h3>
+                                        <p class="text-center mb-4">Jabalpur Luxury Experience</p>
+                                        
+                                        <table class="price-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Room Category</th>
+                                                    <th>Continental Plan</th>
+                                                    <th>Modified American Plan</th>
+                                                    <th>American Plan</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><strong>Premiere</strong></td>
+                                                    <td>₹1,550 - ₹2,350</td>
+                                                    <td>₹1,800 - ₹2,650</td>
+                                                    <td>₹2,000 - ₹3,050</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Pavilion</strong></td>
+                                                    <td>₹1,700 - ₹2,500</td>
+                                                    <td>₹2,050 - ₹2,900</td>
+                                                    <td>₹2,150 - ₹3,100</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Elegance</strong></td>
+                                                    <td>₹2,200 - ₹3,000</td>
+                                                    <td>₹2,450 - ₹3,350</td>
+                                                    <td>₹2,650 - ₹3,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Royale</strong></td>
+                                                    <td>₹2,800 - ₹3,600</td>
+                                                    <td>₹3,050 - ₹3,950</td>
+                                                    <td>₹3,250 - ₹4,100</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Prestige Suite</strong></td>
+                                                    <td>₹4,500 - ₹4,900</td>
+                                                    <td>₹4,750 - ₹5,400</td>
+                                                    <td>₹4,950 - ₹5,800</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><strong>Princess Suite</strong></td>
+                                                    <td>₹8,900 - ₹9,300</td>
+                                                    <td>₹9,150 - ₹9,800</td>
+                                                    <td>₹9,350 - ₹10,200</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                        
+                                        <div class="mt-4">
+                                            <h6>Meal Plans:</h6>
+                                            <ul class="features-list">
+                                                <li><strong>CP Plan:</strong> Room rent and breakfast</li>
+                                                <li><strong>MAP Plan:</strong> Room rent, breakfast and lunch or dinner</li>
+                                                <li><strong>AP Plan:</strong> Room rent, breakfast, lunch & dinner</li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <script>(function () {
-                    var sliderElement = [].slice.call(document.getElementsByClassName('mod_rocksolid_slider'), -1)[0]; if (window.jQuery && jQuery.fn.rstSlider) { init() } else { document.addEventListener('DOMContentLoaded', init) }
-                    function init() {
-                        var $ = jQuery; var slider = $(sliderElement); slider.find('video[data-rsts-background], [data-rsts-type=video] video').each(function () { this.player = !0 }); slider.rstSlider({ "type": "slide", "direction": "x", "width": "css", "height": "css", "navType": "none", "scaleMode": "fit", "imagePosition": "center", "centerContent": !1, "random": !1, "loop": !0, "videoAutoplay": !1, "autoplayProgress": !1, "pauseAutoplayOnHover": !1, "keyboard": !0, "captions": !1, "controls": !0, "thumbControls": !1, "combineNavItems": !0, "preloadSlides": 3, "duration": 1000, "autoplay": 5000, "autoplayRestart": 1000, "prevNextSteps": 1, "visibleArea": 0.5, "visibleAreaAlign": 0.5, "gapSize": 15 }); $(function () {
-                            if (!$.fn.colorbox) { return }
-                            var lightboxConfig = { loop: !1, rel: function () { return $(this).attr('data-lightbox') }, maxWidth: '95%', maxHeight: '95%' }; var update = function (links) { links.colorbox(lightboxConfig) }; slider.on('rsts-slidestart rsts-slidestop', function (event) { update(slider.find('a[data-lightbox]')) }); update(slider.find('a[data-lightbox]'))
-                        })
-                    }
-                })()</script>
+                            
+                            <!-- Special Packages -->
+                            <div class="package-highlight">
+                                <h4>Special Packages</h4>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="package-price">₹18,500</div>
+                                        <p><strong>2 Nights & 3 Days</strong><br>APAI (for two adults)</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="package-price">₹26,100</div>
+                                        <p><strong>3 Nights & 4 Days</strong><br>APAI (for two adults)</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- What makes us special section -->
+                <div class="mod_article section-padding block" id="article-359">
+                    <div class="container-fluid width-max-1200">
+                        <h2 class="ce_headline text-center uppercase ">
+                            What makes us special</h2>
+                        <div class="ce_text width-max-600 text-center  block">
+                            <p>Getting out of bed for a breath of fresh air without leaving your room? Enjoying a
+                                delicious cup of coffee in a beautifully planted garden in the middle of Hotel Presting Princess? 
+                                </p>
+                            <p>Welcome to the Hotel Presting Princess!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Image Carousel Section -->
+                <div class="mod_article section-padding block" id="carousel">
+                    <div class="container-fluid width-max-1200">
+                        <div class="mod_rocksolid_slider carousel  block">
+                            <div data-rsts-name="Slide 3">
+                                <div class="ce_image block">
+                                    <figure class="image_container">
+                                        <picture>
+                                            <source
+                                                srcset="./assets/images/images/DSC_0010.jpg 320w, ./assets/images/images/DSC_0010.jpg 640w, ./assets/images/images/DSC_0010.jpg 960w"
+                                                sizes="100vw" type="image/webp" width="320" height="213">
+                                            <img src="./assets/images/images/DSC_0010.jpg"
+                                                srcset="./assets/images/images/DSC_0010.jpg 320w, ./assets/images/images/DSC_0010.jpg 640w, ./assets/images/images/DSC_0010.jpg 960w"
+                                                sizes="100vw" width="320" height="213"
+                                                alt="A secluded spot - right in the middle of Mitte. A little away from the hustle and bustle of the capital, yet right in the middle of it all - that&#39;s how the Aquino Summer Garden awaits you."
+                                                title="A secluded spot - right in the middle of Mitte. A little away from the hustle and bustle of the capital, yet right in the middle of it all - that&#39;s how the Aquino Summer Garden awaits you.">
+                                        </picture>
+                                        <figcaption class="caption">A secluded spot - right in the middle of Mitte.
+                                            A little away from the hustle and bustle of the capital, yet right in
+                                            the middle of it all - that&#39;s how the Aquino Summer Garden awaits
+                                            you.</figcaption>
+                                    </figure>
+                                </div>
+                                <div class="ce_text  block">
+                                    <p>Comfortable Guest Room with Seating Area</p>
+                                </div>
+                            </div>
+                            <div data-rsts-name="Slide 1">
+                                <div class="ce_image  block">
+                                    <figure class="image_container">
+                                        <picture>
+                                            <source
+                                                srcset="./assets/images/images/DSC_0326.JPG 320w, ./assets/images/images/DSC_0326.JPG 640w, ./assets/images/images/DSC_0326.JPG 960w"
+                                                sizes="100vw" type="image/webp" width="320" height="213">
+                                            <img src="./assets/images/images/DSC_0326.JPG"
+                                                srcset="./assets/images/images/DSC_0326.JPG 320w, ./assets/images/images/DSC_0326.JPG 640w, ./assets/images/images/DSC_0326.JPG 960w"
+                                                sizes="100vw" width="320" height="213"
+                                                alt="Standard room with small balkony"
+                                                title="Standard room with small balkony">
+                                        </picture>
+                                    </figure>
+                                </div>
+                                <div class="ce_text  block">
+                                    <p>Premium Hotel Suite Living & Dining Area</p>
+                                </div>
+                            </div>
+                            <div data-rsts-name="Slide 2">
+                                <div class="ce_image  block">
+                                    <figure class="image_container">
+                                        <picture>
+                                            <source
+                                                srcset="./assets/images/images/DSC_0215.JPG 320w, ./assets/images/images/DSC_0215.JPG 640w, ./assets/images/images/DSC_0215.JPG 960w"
+                                                sizes="100vw" type="image/webp" width="320" height="213">
+                                            <img src="./assets/images/images/DSC_0215.JPG"
+                                                srcset="./assets/images/images/DSC_0215.JPG 320w, ../assets/images/images/DSC_0215.JPG 640w, ../assets/images/images/DSC_0215.JPG 960w"
+                                                sizes="100vw" width="320" height="213" alt="Lobby garden"
+                                                title="Lobby garden">
+                                        </picture>
+                                    </figure>
+                                </div>
+                                <div class="ce_text  block">
+                                    <p>Indoor Indian Wedding Hall Setup </p>
+                                </div>
+                            </div>
+                            <div data-rsts-name="Slide 4">
+                                <div class="ce_image  block">
+                                    <figure class="image_container">
+                                        <picture>
+                                            <source
+                                                srcset="./assets/images/images/DSC_0432.jpg 320w, ./assets/images/images/DSC_0432.jpg 640w, ./assets/images/images/DSC_0432.jpg 960w"
+                                                sizes="100vw" type="image/webp" width="320" height="213">
+                                            <img src="./assets/images/images/DSC_0432.jpg"
+                                                srcset="./assets/images/images/DSC_0432.jpg 320w, ./assets/images/images/DSC_0432.jpg 640w, ./assets/images/images/DSC_0432.jpg 960w"
+                                                sizes="100vw" width="320" height="213"
+                                                alt="The lobby of the Hotel Aquino with grand piano"
+                                                title="The lobby of the Hotel Aquino with grand piano">
+                                        </picture>
+                                    </figure>
+                                </div>
+                                <div class="ce_text  block">
+                                    <p>Corporate Meeting or Conference Room Setup</p>
+                                </div>
+                            </div>
+                        </div>
+                        <script>(function () {
+                var sliderElement = [].slice.call(document.getElementsByClassName('mod_rocksolid_slider'), -1)[0]; if (window.jQuery && jQuery.fn.rstSlider) { init() } else { document.addEventListener('DOMContentLoaded', init) }
+                function init() {
+                    var $ = jQuery; var slider = $(sliderElement); slider.find('video[data-rsts-background], [data-rsts-type=video] video').each(function () { this.player = !0 }); slider.rstSlider({ "type": "slide", "direction": "x", "width": "css", "height": "css", "navType": "none", "scaleMode": "fit", "imagePosition": "center", "centerContent": !1, "random": !1, "loop": !0, "videoAutoplay": !1, "autoplayProgress": !1, "pauseAutoplayOnHover": !1, "keyboard": !0, "captions": !1, "controls": !0, "thumbControls": !1, "combineNavItems": !0, "preloadSlides": 3, "duration": 1000, "autoplay": 5000, "autoplayRestart": 1000, "prevNextSteps": 1, "visibleArea": 0.5, "visibleAreaAlign": 0.5, "gapSize": 15 }); $(function () {
+                        if (!$.fn.colorbox) { return }
+                        var lightboxConfig = { loop: !1, rel: function () { return $(this).attr('data-lightbox') }, maxWidth: '95%', maxHeight: '95%' }; var update = function (links) { links.colorbox(lightboxConfig) }; slider.on('rsts-slidestart rsts-slidestop', function (event) { update(slider.find('a[data-lightbox]')) }); update(slider.find('a[data-lightbox]'))
+                    })
+                }
+            })()</script>
                     </div>
                 </div>
             </main>
         </div>
+
         <footer id="footer">
             <div class="inside">
                 <div class="container-fluid width-max-1200 pt-5">

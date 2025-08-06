@@ -1,10 +1,13 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Hotel Prestige Princess - Rooms & Tariffs</title>
     <link rel="canonical" href="rooms.html">
-    <link rel="stylesheet" href="./assets/css/layout.min.css%2crocksolid-slider.min.css%2cdefault-skin.min.css%2ccol...-2c79358b.css">
-    <script src="./assets/js/jquery.min.js%2crocksolid-slider.min.js%2ccookiebar.min.js%2cmobile-me...-4a77e90c.js"></script>
+    <link rel="stylesheet"
+        href="./assets/css/layout.min.css%2crocksolid-slider.min.css%2cdefault-skin.min.css%2ccol...-2c79358b.css">
+    <script
+        src="./assets/js/jquery.min.js%2crocksolid-slider.min.js%2ccookiebar.min.js%2cmobile-me...-4a77e90c.js"></script>
     <link rel="alternate" hreflang="de" href="../de/rooms.html">
     <link rel="alternate" hreflang="en" href="rooms.html">
     <link rel="alternate" hreflang="x-default" href="rooms.html">
@@ -14,23 +17,23 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./files/theme/fav/favicon-16x16.png">
     <link rel="manifest" href="./files/theme/fav/site.html">
     <link rel="shortcut icon" href="./files/theme/fav/favicon.ico">
-    
+
     <style>
         /* Tariff Styling */
         .tariff-section {
             padding: 60px 0;
             background: #f8f9fa;
         }
-        
+
         .tariff-card {
             background: white;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             padding: 30px;
             margin-bottom: 30px;
             border: 1px solid #e9ecef;
         }
-        
+
         .tariff-card h3 {
             color: #2C1810;
             font-size: 1.6rem;
@@ -38,14 +41,14 @@
             text-align: center;
             font-weight: 600;
         }
-        
+
         .price-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
             font-size: 0.9rem;
         }
-        
+
         .price-table th {
             background: #D4AF37;
             color: white;
@@ -53,36 +56,36 @@
             text-align: center;
             font-weight: 600;
         }
-        
+
         .price-table td {
             padding: 10px 8px;
             text-align: center;
             border-bottom: 1px solid #eee;
         }
-        
+
         .price-table tr:nth-child(even) {
             background: rgba(212, 175, 55, 0.05);
         }
-        
+
         .price-highlight {
             color: #D4AF37;
             font-weight: 700;
             font-size: 1rem;
         }
-        
+
         .features-list {
             list-style: none;
             padding: 0;
             margin: 20px 0;
         }
-        
+
         .features-list li {
             padding: 6px 0;
             border-bottom: 1px solid #eee;
             position: relative;
             padding-left: 20px;
         }
-        
+
         .features-list li::before {
             content: '✓';
             position: absolute;
@@ -90,7 +93,7 @@
             color: #D4AF37;
             font-weight: bold;
         }
-        
+
         .package-highlight {
             background: linear-gradient(135deg, #D4AF37 0%, #B8860B 100%);
             color: white;
@@ -99,18 +102,18 @@
             margin: 30px 0;
             text-align: center;
         }
-        
+
         .package-price {
             font-size: 1.8rem;
             font-weight: 700;
             margin: 10px 0;
         }
-        
+
         .room-categories {
             padding: 60px 0;
             background: white;
         }
-        
+
         .room-category {
             margin-bottom: 30px;
             padding: 25px;
@@ -118,30 +121,30 @@
             background: #f8f9fa;
             border-left: 4px solid #D4AF37;
         }
-        
+
         .room-category h3 {
             color: #2C1810;
             font-size: 1.4rem;
             margin-bottom: 10px;
         }
-        
+
         .room-category p {
             color: #6C757D;
             line-height: 1.6;
         }
-        
+
         .contact-section {
             background: #2C1810;
             color: white;
             padding: 50px 0;
             text-align: center;
         }
-        
+
         .contact-section h3 {
             color: #D4AF37;
             margin-bottom: 20px;
         }
-        
+
         .btn-luxury {
             background: #D4AF37;
             color: white;
@@ -154,86 +157,146 @@
             transition: all 0.3s ease;
             margin: 10px;
         }
-        
+
         .btn-luxury:hover {
             background: #B8860B;
             transform: translateY(-2px);
             color: white;
             text-decoration: none;
         }
-        
-        /* Carousel Styling */
-        #carousel {
+
+        /* Room Categories Cards Styling */
+        #room-categories {
             padding: 80px 0;
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
         }
-        
-        #carousel h2 {
+
+        #room-categories h2 {
             color: #2C1810;
+            text-align: center;
+            margin-bottom: 50px;
             font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .room-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100%;
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .room-card-image {
+            position: relative;
+            overflow: hidden;
+            height: 250px;
+        }
+
+        .room-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .room-card:hover .room-card-image img {
+            transform: scale(1.05);
+        }
+
+        .room-card-content {
+            padding: 25px;
+            background: white;
+        }
+
+        .room-card-content h4 {
+            color: #2C1810;
+            font-size: 1.3rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            line-height: 1.3;
         }
-        
-        #carousel .ce_text {
+
+        .room-card-content p {
             color: #6C757D;
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 1.6;
+            margin: 0;
         }
-        
+
+        @media (max-width: 768px) {
+            .room-card-content {
+                padding: 20px;
+            }
+            
+            .room-card-content h4 {
+                font-size: 1.2rem;
+            }
+            
+            .room-card-image {
+                height: 200px;
+            }
+        }
+
         .mod_rocksolid_slider {
             margin: 0 auto;
             max-width: 1200px;
             background: white;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             overflow: hidden;
         }
-        
+
         .mod_rocksolid_slider .ce_image {
             text-align: center;
             padding: 20px;
         }
-        
+
         .mod_rocksolid_slider img {
             max-width: 100%;
             height: auto;
             border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
         }
-        
+
         .mod_rocksolid_slider img:hover {
             transform: scale(1.02);
         }
-        
+
         .mod_rocksolid_slider .ce_text {
             text-align: center;
             padding: 30px;
             background: white;
         }
-        
+
         .mod_rocksolid_slider .ce_text h4 {
             color: #D4AF37;
             font-size: 1.4rem;
             font-weight: 600;
             margin-bottom: 15px;
         }
-        
+
         .mod_rocksolid_slider .ce_text p {
             color: #6C757D;
             font-size: 1rem;
             line-height: 1.6;
             margin: 0;
         }
-        
+
         .mod_rocksolid_slider .caption {
             font-size: 0.9rem;
             color: #D4AF37;
             margin-top: 10px;
             font-weight: 500;
         }
-        
+
         /* Carousel Navigation Styling */
         .mod_rocksolid_slider .rsts-nav {
             background: rgba(212, 175, 55, 0.1);
@@ -242,7 +305,7 @@
             margin: 20px auto;
             max-width: 200px;
         }
-        
+
         .mod_rocksolid_slider .rsts-nav button {
             background: #D4AF37;
             border: none;
@@ -254,17 +317,17 @@
             font-weight: bold;
             transition: all 0.3s ease;
         }
-        
+
         .mod_rocksolid_slider .rsts-nav button:hover {
             background: #B8860B;
             transform: scale(1.1);
         }
-        
+
         .mod_rocksolid_slider .rsts-dots {
             text-align: center;
             margin: 20px 0;
         }
-        
+
         .mod_rocksolid_slider .rsts-dots button {
             background: #D4AF37;
             border: none;
@@ -274,21 +337,21 @@
             margin: 0 5px;
             transition: all 0.3s ease;
         }
-        
+
         .mod_rocksolid_slider .rsts-dots button.active {
             background: #B8860B;
             transform: scale(1.2);
         }
-        
+
         @media (max-width: 768px) {
             .tariff-card {
                 padding: 20px;
             }
-            
+
             .price-table {
                 font-size: 0.8rem;
             }
-            
+
             .price-table th,
             .price-table td {
                 padding: 8px 5px;
@@ -307,16 +370,20 @@
                     </div>
                     <div class="nav--bar">
                         <a class="nav--brand" href="index.html">
-                            <img src="assets/images/logop.png" alt="Logo" width="130" height="110">
+                            <img src="assets/images/logop.png" alt="Logo" height="110" style="width: 65%;">
                         </a>
                         <nav class="mod_customnav main-nav--custom block">
                             <a href="index.html#skipNavigation18" class="invisible">Skip navigation</a>
                             <ul class="level_1">
-                                <li class="first"><a href="rooms.html" title="Luxury rooms and suites" class="first">Rooms</a></li>
-                                <li><a href="meetings-events.html" title="Conference and event facilities">Meetings & Events</a></li>
+                                <li class="first"><a href="rooms.html" title="Luxury rooms and suites"
+                                        class="first">Rooms</a></li>
+                                <li><a href="meetings-events.html" title="Conference and event facilities">Meetings &
+                                        Events</a></li>
                                 <!-- <li><a href="gastronomy.html" title="Fine dining and restaurants">Gastronomy</a></li> -->
-                                <li class="sibling"><a href="impressions.html" title="Hotel impressions and photos" class="sibling">Impressions</a></li>
-                                <li class="sibling"><a href="contact.html" title="Contact" class="sibling">Contact</a></li>
+                                <li class="sibling"><a href="impressions.html" title="Hotel impressions and photos"
+                                        class="sibling">Impressions</a></li>
+                                <li class="sibling"><a href="contact.html" title="Contact" class="sibling">Contact</a>
+                                </li>
                             </ul>
                             <span id="skipNavigation18" class="invisible"></span>
                         </nav>
@@ -339,14 +406,22 @@
                                         <a href="index.html#skipNavigation1" class="invisible">Skip navigation</a>
                                         <ul class="level_1">
                                             <li class="active first"><strong class="active first">Welcome</strong></li>
-                                            <li class="sibling"><a href="rooms.html" title="Luxury rooms and suites" class="sibling">Rooms</a></li>
-                                            <li class="sibling"><a href="meetings-events.html" title="Conference and event facilities" class="sibling">Meetings & Events</a></li>
+                                            <li class="sibling"><a href="rooms.html" title="Luxury rooms and suites"
+                                                    class="sibling">Rooms</a></li>
+                                            <li class="sibling"><a href="meetings-events.html"
+                                                    title="Conference and event facilities" class="sibling">Meetings &
+                                                    Events</a></li>
                                             <!-- <li class="sibling"><a href="gastronomy.html" title="Fine dining and restaurants" class="sibling">Gastronomy</a></li> -->
                                             <!-- <li class="sibling"><a href="event-room-rental.html" title="Private celebrations and events" class="sibling">Family celebrations</a></li> -->
-                                            <li class="sibling"><a href="location-and-directions.html" title="Location and Directions" class="sibling">Location and Directions</a></li>
+                                            <li class="sibling"><a href="location-and-directions.html"
+                                                    title="Location and Directions" class="sibling">Location and
+                                                    Directions</a></li>
                                             <!-- <li class="sibling"><a href="career.html" title="Career opportunities" class="sibling">Career</a></li> -->
-                                            <li class="sibling"><a href="impressions.html" title="Hotel impressions and photos" class="sibling">Impressions</a></li>
-                                            <li class="sibling"><a href="contact.html" title="Contact" class="sibling">Contact</a></li>
+                                            <li class="sibling"><a href="impressions.html"
+                                                    title="Hotel impressions and photos" class="sibling">Impressions</a>
+                                            </li>
+                                            <li class="sibling"><a href="contact.html" title="Contact"
+                                                    class="sibling">Contact</a></li>
                                             <!-- <li class="sibling"><a href="privacy-policy.html" title="Privacy Policy" class="sibling">Privacy Policy</a></li> -->
                                         </ul>
                                         <span id="skipNavigation1" class="invisible"></span>
@@ -362,10 +437,10 @@
                     <div class="block-max-width">
                         <div class="text-bg--image hero-image ce_rsce_text_picture image-kb-wrap">
                             <picture>
-                                <source srcset="./assets/images/images/DSC_0460.jpg 575w"
-                                    sizes="100vw" media="(max-width: 575px)" type="image/webp" width="575" height="860">
-                                <source srcset="./assets/images/images/DSC_0460.jpg 575w"
-                                    sizes="100vw" media="(max-width: 575px)" width="575" height="860">
+                                <source srcset="./assets/images/images/DSC_0460.jpg 575w" sizes="100vw"
+                                    media="(max-width: 575px)" type="image/webp" width="575" height="860">
+                                <source srcset="./assets/images/images/DSC_0460.jpg 575w" sizes="100vw"
+                                    media="(max-width: 575px)" width="575" height="860">
                                 <source
                                     srcset="./assets/images/images/DSC_0460.jpg 770w, ../assets/images/images/DSC_0460.jpg 828w"
                                     sizes="100vw" media="(max-width: 767px)" type="image/webp" width="770" height="800">
@@ -406,13 +481,14 @@
                         </h1>
                         <div class="ce_text width-max-600 block mx-auto">
                             <p style="text-align: center;">
-                                Experience unparalleled comfort and elegance in our meticulously designed rooms and suites. 
-                                From cozy standard rooms to luxurious suites, every accommodation is crafted to exceed your expectations.
+                                Discover our premium accommodations featuring modern amenities, elegant furnishings, and 
+                                exceptional comfort. From conference rooms to luxurious suites, we offer the perfect 
+                                space for every occasion.
                             </p>
                             <p style="text-align: center;">
-                                Whether you're traveling for business or leisure, our rooms provide the perfect blend of 
-                                comfort, style, and functionality. Each room is equipped with modern amenities and designed 
-                                with your comfort in mind.
+                                Each room is thoughtfully designed with contemporary style and functionality, ensuring 
+                                your stay is both comfortable and memorable. Experience the perfect blend of luxury 
+                                and convenience.
                             </p>
                             <p style="text-align: center;">
                                 Discover your perfect stay with us!
@@ -448,8 +524,7 @@
                                     <figure class="image_container" style="margin-top:50px;">
                                         <img src="./assets/images/a/icon-feature-tiefgarage-91d4402a.jpg"
                                             srcset="./assets/images/a/icon-feature-tiefgarage-91d4402a.jpg 1x, ./assets/images/5/icon-feature-tiefgarage-ba1cc6da.jpg 1.5x, ./assets/images/5/icon-feature-tiefgarage-0f9724b8.jpg 2x"
-                                            width="100" height="100"
-                                            alt="Modern Room Facilities">
+                                            width="100" height="100" alt="Modern Room Facilities">
                                     </figure>
                                 </div>
                                 <div class="ce_text block">
@@ -502,15 +577,8 @@
                                     <div
                                         class="teaser-area d-flex justify-content-center align-items-center area--white">
                                         <div class="teaser-text--inner">
-                                            <h2>Perfect venue for your special events</h2>
-                                            <p>Hotel Prestige Princess is the perfect venue for weddings, corporate
-                                                events, and social gatherings. With elegant banquet halls, modern
-                                                amenities, and a central location in Jabalpur, every event is executed
-                                                with care and class. Let us make your special occasion seamless,
-                                                stylish, and unforgettable. Our dedicated team ensures personalized
-                                                service to turn your vision into reality.<a
-                                                    href="meetings-events.html">Send us your
-                                                    enquiry HERE!</a></p>
+                                            <h2>Comfort Redefined – Where Simplicity Meets Serenity.</h2>
+                                            <p>This room offers a warm and inviting ambiance with its soft lighting and soothing beige tones. The spacious king-size bed, adorned with crisp white linens, ensures a restful and comfortable stay. Thoughtfully placed wall-mounted lamps add a subtle touch of elegance to the overall minimalist decor. With its neat layout and well-organized furnishings, the space provides a serene and clutter-free environment for relaxation.
                                         </div>
                                     </div>
                                 </div>
@@ -530,8 +598,8 @@
                                 <div class="col-md-6 order-md-1 order-1">
                                     <div class="teaser-image h-100 h-100-img object-fit-cover">
                                         <picture>
-                                            <img src="./assets/images/images/DSC_0010.jpg"
-                                                srcset="./assets/images/images/DSC_0010.jpg 600w, ./assets/images/images/DSC_0010.jpg 1200w"
+                                            <img src="./assets/images/images/DSC_0173.jpg"
+                                                srcset="./assets/images/images/DSC_0173.jpg 600w, ./assets/images/images/DSC_0173.jpg 1200w"
                                                 sizes="(max-width: 600px) 600px" width="600" height="400"
                                                 alt="View over Hotel Prestige Princess on a sunny day"
                                                 title="View over Hotel Prestige Princess on a sunny day">
@@ -542,25 +610,9 @@
                                     <div
                                         class="teaser-area d-flex justify-content-center align-items-center area--black">
                                         <div class="teaser-text--inner">
-                                            <h2>The heart of Jabalpur right outside your door.</h2>
+                                            <h2>Elegance and Comfort in Every Corner.</h2>
                                             <p>
-                                                Discover the perfect blend of history, nature, and culture.
-
-                                                Explore iconic spots like Bhedaghat, Madan Mahal, and Rani Durgavati
-                                                Fort.
-
-                                                Step into the charm of Jabalpur—where every corner tells a story.
-
-                                                From marble cliffs to lively markets, adventure awaits just moments
-                                                away.
-
-                                                Experience the soulful vibe of Madhya Pradesh's cultural capital.
-
-                                                Unwind, explore, and be inspired—Jabalpur is calling.
-
-                                                Stay central, stay connected, and make memories that last.
-
-                                                A city rich in tradition, surrounded by natural wonders.
+                                                This room radiates elegance with its warm lighting and tasteful wooden furnishings. The clean, modern layout is enhanced by cozy armchairs and fresh flowers, adding a homely touch. Large curtains provide both privacy and a sense of sophistication. Overall, the space feels serene and well-designed for relaxation and comfort.
                                             </p>
                                         </div>
                                     </div>
@@ -568,13 +620,14 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="mod_article section-padding block" id="article-356">
                         <div class="container-fluid width-max-1200">
                             <h2 class="ce_headline text-center uppercase ">
                                 Our Room Categories & Tariffs</h2>
                             <div class="ce_text width-max-600 text-center  block">
-                                <p style="text-align: center;">Experience luxury and comfort with our carefully designed room categories and competitive pricing.</p>
+                                <p style="text-align: center;">Experience luxury and comfort with our carefully designed
+                                    room categories and competitive pricing.</p>
                             </div>
                         </div>
                     </div>
@@ -587,11 +640,12 @@
                                     <div class="tariff-card">
                                         <h3>Prestige Nature's Nest</h3>
                                         <p class="text-center mb-4">Kanha National Park Experience</p>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <h5 class="text-center mb-3">Continental Plan</h5>
-                                                <p class="text-center"><small>Room + Breakfast + Free Swimming Pool</small></p>
+                                                <p class="text-center"><small>Room + Breakfast + Free Swimming
+                                                        Pool</small></p>
                                                 <table class="price-table">
                                                     <thead>
                                                         <tr>
@@ -621,7 +675,8 @@
                                             </div>
                                             <div class="col-md-6">
                                                 <h5 class="text-center mb-3">American Plan</h5>
-                                                <p class="text-center"><small>Room + Breakfast + Lunch + Dinner + Free Swimming Pool</small></p>
+                                                <p class="text-center"><small>Room + Breakfast + Lunch + Dinner + Free
+                                                        Swimming Pool</small></p>
                                                 <table class="price-table">
                                                     <thead>
                                                         <tr>
@@ -650,7 +705,7 @@
                                                 </table>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="mt-4">
                                             <h6>Child Rates:</h6>
                                             <ul class="features-list">
@@ -660,12 +715,12 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-lg-6">
                                     <div class="tariff-card">
                                         <h3>Hotel Prestige Princess</h3>
                                         <p class="text-center mb-4">Jabalpur Luxury Experience</p>
-                                        
+
                                         <table class="price-table">
                                             <thead>
                                                 <tr>
@@ -714,19 +769,20 @@
                                                 </tr>
                                             </tbody>
                                         </table>
-                                        
+
                                         <div class="mt-4">
                                             <h6>Meal Plans:</h6>
                                             <ul class="features-list">
                                                 <li><strong>CP Plan:</strong> Room rent and breakfast</li>
-                                                <li><strong>MAP Plan:</strong> Room rent, breakfast and lunch or dinner</li>
+                                                <li><strong>MAP Plan:</strong> Room rent, breakfast and lunch or dinner
+                                                </li>
                                                 <li><strong>AP Plan:</strong> Room rent, breakfast, lunch & dinner</li>
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Special Packages -->
                             <div class="package-highlight">
                                 <h4>Special Packages</h4>
@@ -752,97 +808,108 @@
                             What makes us special</h2>
                         <div class="ce_text width-max-600 text-center  block">
                             <p>Getting out of bed for a breath of fresh air without leaving your room? Enjoying a
-                                delicious cup of coffee in a beautifully planted garden in the middle of Hotel Presting Princess? 
-                                </p>
+                                delicious cup of coffee in a beautifully planted garden in the middle of Hotel Presting
+                                Princess?
+                            </p>
                             <p>Welcome to the Hotel Presting Princess!</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- Image Carousel Section -->
-                <div class="mod_article section-padding block" id="carousel">
+                <!-- Room Categories Cards Section -->
+                <div class="mod_article section-padding block" id="room-categories">
                     <div class="container-fluid width-max-1200">
-                        <div class="mod_rocksolid_slider carousel  block">
-                            <div data-rsts-name="Slide 3">
-                                <div class="ce_image block">
-                                    <figure class="image_container">
-                                        <picture>
-                                            <source
-                                                srcset="./assets/images/images/DSC_0010.jpg 320w, ./assets/images/images/DSC_0010.jpg 640w, ./assets/images/images/DSC_0010.jpg 960w"
-                                                sizes="100vw" type="image/webp" width="320" height="213">
-                                            <img src="./assets/images/images/DSC_0010.jpg"
-                                                srcset="./assets/images/images/DSC_0010.jpg 320w, ./assets/images/images/DSC_0010.jpg 640w, ./assets/images/images/DSC_0010.jpg 960w"
-                                                sizes="100vw" width="320" height="213"
-                                                alt="A secluded spot - right in the middle of Mitte. A little away from the hustle and bustle of the capital, yet right in the middle of it all - that&#39;s how the Aquino Summer Garden awaits you."
-                                                title="A secluded spot - right in the middle of Mitte. A little away from the hustle and bustle of the capital, yet right in the middle of it all - that&#39;s how the Aquino Summer Garden awaits you.">
-                                        </picture>
-                                        <figcaption class="caption">A secluded spot - right in the middle of Mitte.
-                                            A little away from the hustle and bustle of the capital, yet right in
-                                            the middle of it all - that&#39;s how the Aquino Summer Garden awaits
-                                            you.</figcaption>
-                                    </figure>
-                                </div>
-                                <div class="ce_text  block">
-                                    <p>Comfortable Guest Room with Seating Area</p>
+                        <h2 class="ce_headline text-center uppercase mb-5">
+                            Our Room Categories
+                        </h2>
+                        <div class="row">
+                            <!-- Conference Room Card -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="room-card">
+                                    <div class="room-card-image">
+                                        <img src="./assets/images/images/PICT0243.jpg" 
+                                             alt="Conference Room Setup with modern facilities"
+                                             class="img-fluid">
+                                    </div>
+                                    <div class="room-card-content">
+                                        <h4>Graceful comfort designed just for her.</h4>
+                                        <p>This beautifully crafted canopy bed adds a touch of timeless charm and luxury to your stay..</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div data-rsts-name="Slide 1">
-                                <div class="ce_image  block">
-                                    <figure class="image_container">
-                                        <picture>
-                                            <source
-                                                srcset="./assets/images/images/DSC_0326.JPG 320w, ./assets/images/images/DSC_0326.JPG 640w, ./assets/images/images/DSC_0326.JPG 960w"
-                                                sizes="100vw" type="image/webp" width="320" height="213">
-                                            <img src="./assets/images/images/DSC_0326.JPG"
-                                                srcset="./assets/images/images/DSC_0326.JPG 320w, ./assets/images/images/DSC_0326.JPG 640w, ./assets/images/images/DSC_0326.JPG 960w"
-                                                sizes="100vw" width="320" height="213"
-                                                alt="Standard room with small balkony"
-                                                title="Standard room with small balkony">
-                                        </picture>
-                                    </figure>
-                                </div>
-                                <div class="ce_text  block">
-                                    <p>Premium Hotel Suite Living & Dining Area</p>
+                            
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="room-card">
+                                    <div class="room-card-image">
+                                        <img src="./assets/images/images/DSC_0326.JPG" 
+                                             alt="Conference Room Setup with modern facilities"
+                                             class="img-fluid">
+                                    </div>
+                                    <div class="room-card-content">
+                                        <h4>Conference Room Setup</h4>
+                                        <p>Professional meeting spaces equipped with modern technology and comfortable seating for your business needs.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div data-rsts-name="Slide 2">
-                                <div class="ce_image  block">
-                                    <figure class="image_container">
-                                        <picture>
-                                            <source
-                                                srcset="./assets/images/images/DSC_0215.JPG 320w, ./assets/images/images/DSC_0215.JPG 640w, ./assets/images/images/DSC_0215.JPG 960w"
-                                                sizes="100vw" type="image/webp" width="320" height="213">
-                                            <img src="./assets/images/images/DSC_0215.JPG"
-                                                srcset="./assets/images/images/DSC_0215.JPG 320w, ../assets/images/images/DSC_0215.JPG 640w, ../assets/images/images/DSC_0215.JPG 960w"
-                                                sizes="100vw" width="320" height="213" alt="Lobby garden"
-                                                title="Lobby garden">
-                                        </picture>
-                                    </figure>
-                                </div>
-                                <div class="ce_text  block">
-                                    <p>Indoor Indian Wedding Hall Setup </p>
+                            <!-- Comfortable Guest Room Card -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="room-card">
+                                    <div class="room-card-image">
+                                        <img src="./assets/images/images/DSC_0392.jpg" 
+                                             alt="Comfortable Guest Room with Seating Area"
+                                             class="img-fluid">
+                                    </div>
+                                    <div class="room-card-content">
+                                        <h4>A space that feels just like home</h4>
+                                        <p>Spacious rooms featuring elegant furnishings, comfortable seating areas, and all modern amenities for your relaxation.</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div data-rsts-name="Slide 4">
-                                <div class="ce_image  block">
-                                    <figure class="image_container">
-                                        <picture>
-                                            <source
-                                                srcset="./assets/images/images/DSC_0432.jpg 320w, ./assets/images/images/DSC_0432.jpg 640w, ./assets/images/images/DSC_0432.jpg 960w"
-                                                sizes="100vw" type="image/webp" width="320" height="213">
-                                            <img src="./assets/images/images/DSC_0432.jpg"
-                                                srcset="./assets/images/images/DSC_0432.jpg 320w, ./assets/images/images/DSC_0432.jpg 640w, ./assets/images/images/DSC_0432.jpg 960w"
-                                                sizes="100vw" width="320" height="213"
-                                                alt="The lobby of the Hotel Aquino with grand piano"
-                                                title="The lobby of the Hotel Aquino with grand piano">
-                                        </picture>
-                                    </figure>
+                            
+                            <!-- Premium Hotel Suite Card -->
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="room-card">
+                                    <div class="room-card-image">
+                                        <img src="./assets/images/images/DSC_0260.jpg" 
+                                             alt="Premium Hotel Suite entrance and living area"
+                                             class="img-fluid">
+                                    </div>
+                                    <div class="room-card-content">
+                                        <h4>Comfort Redefined</h4>
+                                        <p>Luxurious suites offering the ultimate in comfort and elegance with separate living and dining areas.</p>
+                                    </div>
                                 </div>
-                                <div class="ce_text  block">
-                                    <p>Corporate Meeting or Conference Room Setup</p>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="room-card">
+                                    <div class="room-card-image">
+                                        <img src="./assets/images/images/PICT0247.jpg" 
+                                             alt="Premium Hotel Suite entrance and living area"
+                                             class="img-fluid">
+                                    </div>
+                                    <div class="room-card-content">
+                                        <h4>Live the elegance, feel the comfort</h4>
+                                        <p>A serene blend of style and space that turns every stay into a luxurious retreat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6 mb-4">
+                                <div class="room-card">
+                                    <div class="room-card-image">
+                                        <img src="./assets/images/images/DSC_0128.jpg" 
+                                             alt="Premium Hotel Suite entrance and living area"
+                                             class="img-fluid">
+                                    </div>
+                                    <div class="room-card-content">
+                                        <h4>Minimal style, maximum comfort.</h4>
+                                        <p>A thoughtfully designed space where simplicity meets sophistication for a truly relaxing experience.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
                         <script>(function () {
                 var sliderElement = [].slice.call(document.getElementsByClassName('mod_rocksolid_slider'), -1)[0]; if (window.jQuery && jQuery.fn.rstSlider) { init() } else { document.addEventListener('DOMContentLoaded', init) }
                 function init() {
@@ -854,51 +921,51 @@
             })()</script>
                     </div>
                 </div>
-            </main>
-        </div>
+        </main>
+    </div>
 
-        <footer id="footer">
-            <div class="inside">
-                <div class="container-fluid width-max-1200 pt-5">
-                    <div class="row justify-content-between">
-                        <div class="col-12 col-md-4">
-                            <p><strong>Hotel Presting Princess</strong><br>
-                                Nagrath Square Near Income Tax Office,<br>
-                                Nagpur Road, Jabalpur,<br>
-                                Madhya Pradesh<br>
-                                <br>
-                                Tel.: <a href="tel:+4000000000">+000000000</a><br>
-                                Mail: <a
-                                    href="mailto:info@hotel-prestingprincess.com"
-                                    class="email">info@hotel-prestingprincess.com</a>
-                            </p>
-                        </div>
-                        <div class="col-12 col-md-3 mt-5 mt-md-0">
-                            <nav class="mod_customnav block">
-                                <a href="index.html#skipNavigation17" class="invisible">Skip navigation</a>
-                                <ul class="level_1">
-                                    <li class="first"><a href="rooms.html"
-                                            title="Newly remodeled, quiet rooms in the middle of Jabalpur"
-                                            class="first">Rooms</a></li>
-                                    <li><a href="meetings-events.html"
-                                            title="Hotel Presting Princess - conference hotel in Jabalpur, in the middle of the city">Meetings
-                                            & Events</a></li>
-                                    <!-- <li><a href="gastronomy.html"
+    <footer id="footer">
+        <div class="inside">
+            <div class="container-fluid width-max-1200 pt-5">
+                <div class="row justify-content-between">
+                    <div class="col-12 col-md-4">
+                        <p><strong>Hotel Presting Princess</strong><br>
+                            Nagrath Square Near Income Tax Office,<br>
+                            Nagpur Road, Jabalpur,<br>
+                            Madhya Pradesh<br>
+                            <br>
+                            Tel.: <a href="tel:+4000000000">+000000000</a><br>
+                            Mail: <a href="mailto:info@hotel-prestingprincess.com"
+                                class="email">info@hotelprestigeprincess.com</a>
+                        </p>
+                    </div>
+                    <div class="col-12 col-md-3 mt-5 mt-md-0">
+                        <nav class="mod_customnav block">
+                            <a href="index.html#skipNavigation17" class="invisible">Skip navigation</a>
+                            <ul class="level_1">
+                                <li class="first"><a href="rooms.html"
+                                        title="Newly remodeled, quiet rooms in the middle of Jabalpur"
+                                        class="first">Rooms</a></li>
+                                <li><a href="meetings-events.html"
+                                        title="Hotel Presting Princess - conference hotel in Jabalpur, in the middle of the city">Meetings
+                                        & Events</a></li>
+                                <!-- <li><a href="gastronomy.html"
                                             title="Eating and drinking at Hotel Presting Princess - also at our beer garden">Gastronomy</a>
                                     </li> -->
-                                    <li><a href="contact.html" title="Contact">Contact</a></li>
-                                    <li><a href="imprint.html"
-                                            title="Imprint - Hotel Presting Princess in the middle of Jabalpur">Imprint</a></li>
-                                    <!-- <li class="last"><a href="privacy-policy.html"
+                                <li><a href="contact.html" title="Contact">Contact</a></li>
+                                <li class="sibling"><a href="impressions.html"
+                                    title="Impressions and pictures of the Hotel Aquino in Berlin"
+                                    class="sibling">Impressions</a></li>
+                                <!-- <li class="last"><a href="privacy-policy.html"
                                             title="Privacy Policy of Hotel Presting Princess in Jabalpur"
                                             class="last">Privacy Policy</a></li> -->
-                                </ul>
-                                <span id="skipNavigation17" class="invisible"></span>
-                            </nav>
-                        </div>
+                            </ul>
+                            <span id="skipNavigation17" class="invisible"></span>
+                        </nav>
                     </div>
                 </div>
             </div>
+        </div>
     </footer>
     </div>
     <script src="../assets/colorbox/js/colorbox.mindf8e.js?v=1.6.4.2"></script>
@@ -960,7 +1027,7 @@
     ]
 }
 </script> -->
-<!-- indexer::stop -->
+    <!-- indexer::stop -->
     <!-- <div class="contao-cookiebar cookiebar_default cc-middle cc-blocked" role="complementary"
         aria-describedby="cookiebar-desc" data-nosnippet>
         <div class="cc-inner" aria-live="assertive" role="alert">
